@@ -1,9 +1,8 @@
-import { showProjects } from "./dataConnection.js";
-import { showProjectsBackEnd } from "./dataConnection.js";
+import { showProjects, showProjectsBackEnd } from "./dataConnection.js";
 const projectsPortfolio = document.querySelector('.projects-portfolio');
 const header = document.querySelector('.header');
 
-function apperHeaderBackgroundGradient(){
+async function apperHeaderBackgroundGradient(){
     window.addEventListener('scroll', () => {
         const y = window.pageYOffset;
         if(y >= 100){
@@ -14,7 +13,7 @@ function apperHeaderBackgroundGradient(){
     });
 };
 
-function constructorDiv(){
+async function constructorDiv(){
     var i = 0
     for(i; i < 6; i++){
         const divCard = document.createElement('div');
@@ -41,7 +40,7 @@ function constructorDiv(){
     }    
 }
 
-function linkToNetworkHeader(){
+async function linkToNetworkHeader(){
     const networks = document.querySelectorAll('.network-icons .fa-brands')
     networks.forEach(network => {
         network.addEventListener('click', () => {
@@ -67,7 +66,7 @@ function linkToNetworkHeader(){
     });
 };
 
-function changeAProjectType(){
+async function changeAProjectType(){
     const front = document.querySelector('#front');
     const back = document.querySelector('#back');
 
@@ -83,7 +82,7 @@ function changeAProjectType(){
     })
 }
 
-function init(){
+async function init(){
     apperHeaderBackgroundGradient();
     constructorDiv(); 
     showProjects();

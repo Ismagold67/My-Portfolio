@@ -1,36 +1,44 @@
-export function showProjects(){
+export async function showProjects() {
     const aboutProject = document.querySelectorAll('.about-project');
     const videoViewProject = document.querySelectorAll('.view-project');
-    fetch("./src/js/dados.json").then((response) => {
-        response.json().then((datas) => {
-            datas.videosProject.map((dataVideo) => {
-                showContentProject(dataVideo, aboutProject);
-                showVideoProject(dataVideo, videoViewProject);
-            });
-        });
-    });
-};
+    
+    try {
+        const response = await fetch("./src/js/dados.json");
+        const datas = await response.json();
 
-export function showProjectsBackEnd(){
+        for (const dataVideo of datas.videosProject) {
+            showContentProject(dataVideo, aboutProject);
+            showVideoProject(dataVideo, videoViewProject);
+        }
+    } catch (error) {
+        console.error("Erro ao buscar dados:", error);
+    }
+}
+
+export async function showProjectsBackEnd() {
     const aboutProject = document.querySelectorAll('.about-project');
     const videoViewProject = document.querySelectorAll('.view-project');
-    fetch("./src/js/dados.json").then((response) => {
-        response.json().then((datas) => {
-            datas.videosProjectBackEnd.map((dataVideo) => {
-                showContentProject(dataVideo, aboutProject);
-                showVideoProject(dataVideo, videoViewProject);
-            });
-        });
-    });
-};
+    
+    try {
+        const response = await fetch("./src/js/dados.json");
+        const datas = await response.json();
 
-function showContentProject(dataVideo, aboutProject){
+        for (const dataVideo of datas.videosProjectBackEnd) {
+            showContentProject(dataVideo, aboutProject);
+            showVideoProject(dataVideo, videoViewProject);
+        }
+    } catch (error) {
+        console.error("Erro ao buscar dados:", error);
+    }
+}
+
+async function showContentProject(dataVideo, aboutProject) {
     aboutProject.forEach(element => {
         const h1 = document.createElement("h1");
         const h2 = document.createElement("h2");
         const p = document.createElement("p");
 
-        if(element.classList.contains(dataVideo.id)){
+        if (element.classList.contains(dataVideo.id)) {
             h1.textContent = `Projeto ${dataVideo.id[4]}`;
             h2.textContent = dataVideo.nomeProjeto;
             p.textContent = dataVideo.description;
@@ -42,7 +50,7 @@ function showContentProject(dataVideo, aboutProject){
     });
 }
 
-function showVideoProject(dataVideo, videoViewProject){
+async function showVideoProject(dataVideo, videoViewProject) {
     videoViewProject.forEach(element => {
         const video = document.createElement('video');
         const instruction = document.querySelectorAll('.instruction');
@@ -50,30 +58,34 @@ function showVideoProject(dataVideo, videoViewProject){
         video.autoplay = true;
         video.muted = true;
         video.loop = true;
-        video.onclick = redirectToDeploy; 
+        video.onclick = redirectToDeploy;
         video.onmouseover = showInstructionMessage;
         video.onmouseout = removeInstructionMessage;
-        if(element.classList.contains(dataVideo.id)){
+        
+        if (element.classList.contains(dataVideo.id)) {
             element.appendChild(video);
         }
-        function redirectToDeploy(){
+
+        function redirectToDeploy() {
             window.location.href = dataVideo.deploy;
         }
-        function showInstructionMessage(){
+
+        function showInstructionMessage() {
             instruction.forEach(element => {
                 const ins = element.getAttribute('class');
-                if(ins[3] === dataVideo.id[4]){
+                if (ins[3] === dataVideo.id[4]) {
                     element.style.display = 'flex';
-                };
+                }
             });
-        };
-        function removeInstructionMessage(){
+        }
+
+        function removeInstructionMessage() {
             instruction.forEach(element => {
-                const ins = element.getAttribute('class')
-                if(ins[3] === dataVideo.id[4]){
+                const ins = element.getAttribute('class');
+                if (ins[3] === dataVideo.id[4]) {
                     element.style.display = 'none';
-                };
+                }
             });
-        };
+        }
     });
-};
+}
