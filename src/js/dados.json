@@ -1,0 +1,90 @@
+{
+    "videosProject": [
+        {
+            "id": "proj1",
+            "nomeProjeto": "TGP - Tecnologia Em Gestão de Pessoas",
+            "path" : "./src/videos/video01",
+            "description" : "Um dos meus primeiros projetos que comecei a desenvolver para adquirir mais conhecimento em Html, Css e Javascript. Criei uma empresa fictícia com esse nome e gerei vários conteúdos com ajuda do Chat-gpt",
+            "deploy": "https://ismagold67.github.io/TGP/index.html" 
+        },
+        {
+            "id": "proj2",
+            "nomeProjeto": "Oza Lindas Joias",
+            "path" : "./src/videos/video02",
+            "description" : "Projeto criado para apresentação de um trabalho de uma aluna do Instituto Federal de Rondônia, que consiste em uma pequena apresentação de uma empresa de joias.",
+            "deploy": "https://ismagold67.github.io/beautifulLinda/" 
+        },
+        {
+            "id": "proj3",
+            "nomeProjeto": "Clone da Netflix",
+            "path" : "./src/videos/video03",
+            "description" : "Esse projeto foi um desafio, pois já entrava em um dos assuntos que não dominava, que é a requisição de dados de um pequeno banco de dados no formato de JSON, e esse foi o resultado.",
+            "deploy": "https://clone-netflix-project-ismagold67.vercel.app/" 
+        },
+        {
+            "id": "proj4",
+            "nomeProjeto": "Jogo da Memória da Marvel",
+            "path" : "./src/videos/video04",
+            "description" : "Primeiro projeto com foco em desenvolvimento de jogos. Esse trabalho foi fruto de um dos bootcamps da DIO no qual um dos projetos finais era um jogo da memória usando Html, Css e Javascript.",
+            "deploy": "https://memory-game-dio.vercel.app/" 
+        },
+        {
+            "id": "proj5",
+            "nomeProjeto": "TSI - Moda Feminina",
+            "path" : "./src/videos/video05",
+            "description" : "Esse site foi um projeto que foi desenvolvido junto com alguns colegas da faculdade como parte de uma atividade avaliativa, que é um site de moda feminina.",
+            "deploy": "http://tsi-fashion.free.nf/?i=1" 
+        },
+        {
+            "id": "proj6",
+            "nomeProjeto": "Salgados Lu&Ro",
+            "path" : "./src/videos/video06",
+            "description" : "Site de visita de uma empresa real e microempreendedora que vende e fornece salgados para revenda na cidade em que moro. Esse é um dos projetos mais recentes até agora desenvolvido.",
+            "deploy": "https://lu-ro-off.vercel.app/" 
+        }
+    ],
+    "videosProjectBackEnd": [
+        {
+            "id": "proj1",
+            "nomeProjeto": "Desafio da Oficina",
+            "path" : "./src/videos/video07",
+            "description" : "Desafio proposto no bootcamp da DIO Potência Tech powered by iFood | Ciências de Dados com Python, no qual foi criado um banco de dados voltado para oficina. Foi utilizado a linguagem sql para estruturação do script.",
+            "deploy": "https://github.com/Ismagold67/desafio_oficina/tree/master" 
+        },
+        {
+            "id": "proj2",
+            "nomeProjeto": "Mini Sistema de Pedido Vegano",
+            "path" : "./src/videos/video08",
+            "description" : "Para efeitos de comparação, criei dois arquivos para teste de código e funcionamento, um em python e outro um diretório de java ambos fazem e trazem o mesmo resultado, o usuário insere quantos pedidos irá realizar, insere o nome dos pratos, informa as calorias, e depois informa se é vegano ou não.",
+            "deploy": "https://github.com/Ismagold67/systemOrderVegan" 
+        },
+        {
+            "id": "proj3",
+            "nomeProjeto": "Sistema de Delivery em Java e Python",
+            "path" : "./src/videos/video09",
+            "description" : "Mini sistema delivery, cujo foram criados duas instâncias de linguagens diferentes. Uma usando Python, e a outra usando Java. Ambos entregam como resposta a mesma situação. O usuário ira dar como entrada o nome do pedido, o valor do pedido e o desconto desejado. Se o valor do desconto for diferente de 10% ou 20%, o programa mandará uma mensagem de erro informando que o valor digitado não condiz com os valores de desconto disponíveis.",
+            "deploy": "https://github.com/Ismagold67/systemDeliveryJavaAndPython" 
+        },
+        {
+            "id": "proj4",
+            "nomeProjeto": "Requisição de Dados de Carro",
+            "path" : "./src/videos/video10",
+            "description" : "Atendendo o desafio proposto pela DIO, uma forma alternativa a ETL, construi um pequeno banco de dados em formato JSON, e um pequeno script em python para fazer um get de modelos de carros disponíveis dentro do BD.",
+            "deploy": "https://github.com/Ismagold67/requestDataCar" 
+        },
+        {
+            "id": "proj5",
+            "nomeProjeto": "Aprendendo Node",
+            "path" : "./src/videos/video11",
+            "description" : "Primeiros fazendo requisições de uma api utilizando Javascript e Postgres como banco de dados. Feito em conjunto com video aulas da Rocketseat.",
+            "deploy": "https://github.com/Ismagold67/node-zero" 
+        },
+        {
+            "id": "proj6",
+            "nomeProjeto": "Aplicação de Sistema de Crédito",
+            "path" : "./src/videos/video12",
+            "description" : "Uma pequena aplicação que está sendo desenvolvida em Kotlin. Um sistema de crédito utilizando Spring Boot e a linguagem de programação Kotlin que está sendo feito em conjunto de um bootcamp da DIO.",
+            "deploy": "https://github.com/Ismagold67/credit-application-system" 
+        }
+    ]
+}
