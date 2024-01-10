@@ -9,11 +9,11 @@ export async function showProjects() {
         for (const dataVideo of datas.videosProject) {
             showContentProject(dataVideo, aboutProject);
             showVideoProject(dataVideo, videoViewProject);
-        }
+        };
     } catch (error) {
         console.error("Erro ao buscar dados:", error);
-    }
-}
+    };
+};
 
 export async function showProjectsBackEnd() {
     const aboutProject = document.querySelectorAll('.about-project');
@@ -26,11 +26,11 @@ export async function showProjectsBackEnd() {
         for (const dataVideo of datas.videosProjectBackEnd) {
             showContentProject(dataVideo, aboutProject);
             showVideoProject(dataVideo, videoViewProject);
-        }
+        };
     } catch (error) {
         console.error("Erro ao buscar dados:", error);
-    }
-}
+    };
+};
 
 async function showContentProject(dataVideo, aboutProject) {
     aboutProject.forEach(element => {
@@ -46,9 +46,9 @@ async function showContentProject(dataVideo, aboutProject) {
             element.appendChild(h1);
             element.appendChild(h2);
             element.appendChild(p);
-        }
+        };
     });
-}
+};
 
 async function showVideoProject(dataVideo, videoViewProject) {
     videoViewProject.forEach(element => {
@@ -64,28 +64,28 @@ async function showVideoProject(dataVideo, videoViewProject) {
         
         if (element.classList.contains(dataVideo.id)) {
             element.appendChild(video);
-        }
+        };
 
         function redirectToDeploy() {
             window.location.href = dataVideo.deploy;
-        }
+        };
 
         function showInstructionMessage() {
             instruction.forEach(element => {
                 const ins = element.getAttribute('class');
                 if (ins[3] === dataVideo.id[4]) {
                     element.style.display = 'flex';
-                }
+                };
             });
-        }
+        };
 
         function removeInstructionMessage() {
             instruction.forEach(element => {
                 const ins = element.getAttribute('class');
                 if (ins[3] === dataVideo.id[4]) {
                     element.style.display = 'none';
-                }
+                };
             });
-        }
+        };
     });
-}
+};
